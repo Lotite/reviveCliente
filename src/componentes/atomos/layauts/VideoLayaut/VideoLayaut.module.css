@@ -1,0 +1,8 @@
+mainViewLayaut {
+  width: 168px;
+  height: 300px;
+  overflow: hidden;
+  background-color: #000;
+  position: relative;
+  transition: all 0.5s;
+}

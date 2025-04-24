@@ -1,0 +1,36 @@
+@keyframes next {
+    0% {
+        
+        transform: translateX(-1000px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+}
+
+@keyframes back {
+    0% {
+        transform: translateX(1000px);
+      }
+      100% {
+        transform: translateX(0px);
+      }
+}
+
+@keyframes nextOut {
+    0% {
+        transform: translateX(0px);
+      }
+      100% {
+        transform: translateX(1000px);
+      }
+}
+
+@keyframes backOut {
+    0% {
+        transform: translateX(0px);
+      }
+      100% {
+        transform: translateX(-1000px);
+      }
+}

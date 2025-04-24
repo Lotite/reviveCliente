@@ -1,0 +1,67 @@
+* {
+    user-select: none;
+  }
+  
+#root > h1{
+    color: white;
+    text-align: center;
+}
+
+body{
+    background-color: #121827;
+    color: white;
+}
+
+html , body{
+    scrollbar-width: none;
+}
+
+
+
+.hiddenView{
+    transform-origin: top right;
+    animation: no 300ms forwards;
+   
+}
+
+.hidden{
+    animation: setHidden 300ms forwards;
+}
+.visible {
+    animation: setVisible 300ms forwards;
+}
+
+
+@keyframes no {
+    0%{
+        display: none;
+    }
+    100%{
+        display: none;
+    }
+}
+
+@keyframes setVisible {
+    0%{
+        scale: 0;
+        
+    }
+    1% {
+        display:"";
+        
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+@keyframes setHidden {
+    0% {
+        scale: 1;
+    }
+    100% {
+        display: none;
+        scale: 0;
+    }
+}
+

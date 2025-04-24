@@ -1,0 +1,30 @@
+@keyframes hiden {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes visible {
+  0% {
+    display: "";
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.hiden {
+  animation: hiden 0.5s forwards;
+}
+.visible {
+  animation: visible 0.5s forwards;
+
+}
+
+

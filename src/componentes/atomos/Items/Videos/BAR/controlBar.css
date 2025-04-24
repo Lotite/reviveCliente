@@ -1,0 +1,20 @@
+ input[type="range"].controlBar {
+    -webkit-appearance:none;
+    height:10px;
+    border-radius:15px;
+    background:#5e6165;
+    outline:none;
+    overflow:hidden;
+    
+  }
+   input[type="range"].controlBar::-webkit-slider-thumb {
+    -webkit-appearance:none;
+    width:10px;
+    height:10px;
+    background:#357d42;
+    border-radius:10px;
+     border-top-left-radius: 0;
+   border-bottom-left-radius: 0;
+    box-shadow:-1000px 0px 0px 992px #357d42;
+    cursor:pointer;
+  }
