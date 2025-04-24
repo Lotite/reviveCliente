@@ -54,13 +54,17 @@ export default class Service {
   }
 
   static async validateToken(): Promise<boolean> {
-    const response = (await this.apiRequest("session")) as response;
+    try{
+      const response = (await this.apiRequest("session")) as response;
     if (response.success) {
       Session.set("token", response.token!);
       return true;
     }
       this.closeSession();
       return false;
+    }catch {
+      return false;
+    }
   }
 
   static async closeSession() {

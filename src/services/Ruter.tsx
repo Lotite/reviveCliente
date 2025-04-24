@@ -8,7 +8,7 @@ export default class Ruter{
     static async redirectUser(){
       const isRegisted = await Service.validateToken();
         if (!isRegisted) {
-          this.toLogin
+          this.toLogin();
         } else{
           this.toIndex();
         }

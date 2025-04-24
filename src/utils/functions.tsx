@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
 import { tInput } from "./types";
 
@@ -18,22 +17,10 @@ export function strTime(time: string | number): string {
   return `${hours > 0 ? String(hours).padStart(2, "0") + ":" : ""}${String(
     minutes
   ).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
-=======
-export function strTime(time: string | number): string {
-  if (typeof time === "string") {
-    time = parseInt(time)
-  }
-const hours:number = Math.floor(time / 3600);
-const minutes:number = Math.floor((time % 3600) / 60);
-const seconds :number = Math.floor(time % 60);
-
-return `${hours > 0 ? String(hours).padStart(2, '0') + ':' : ''}${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
->>>>>>> 8113783ac86e178234d8bd6d99f42effc53d42bb
 }
 
 export function strTimeVideo(time: string | number): string {
   if (typeof time === "string") {
-<<<<<<< HEAD
     time = parseInt(time);
   }
   const hours: number = Math.floor(time / 3600);
@@ -42,31 +29,11 @@ export function strTimeVideo(time: string | number): string {
   return `${hours > 0 ? hours + "h" : ""} ${minutes > 0 ? minutes : "0"}min `;
 }
 
-export function changeBackground(
-  e: React.MouseEvent<HTMLElement | SVGElement>,
-  color: string
-) {
-=======
-    time = parseInt(time)
-  }
-const hours:number = Math.floor(time / 3600);
-const minutes:number = Math.floor((time % 3600) / 60);
-
-return `${hours > 0 ? hours + "h" : ""} ${minutes > 0 ? minutes  : "0"}min `
-}
-
-
 export function changeBackground(e: React.MouseEvent<HTMLElement | SVGElement>, color: string) {
->>>>>>> 8113783ac86e178234d8bd6d99f42effc53d42bb
   const target = e.target as HTMLElement | SVGElement | null;
   if (target) {
     (target as HTMLElement).style.backgroundColor = color;
   }
-}
-
-<<<<<<< HEAD
-export function blockClick(time: number, fun: CallableFunction) {
-  setTimeout(fun, time);
 }
 
 function validate(value: string, type: tInput) {
@@ -109,18 +76,15 @@ export function inputMessage(input: HTMLInputElement, message: string) {
 
 export function clearInputMessage(input: HTMLInputElement) {
   const p = input.parentElement!.parentElement!.querySelector("p");
-    const padre = input.parentElement;
+  const padre = input.parentElement;
   padre!.style.border = "1px solid #fff3";
   p!.innerText = "";
 }
-
-
 
 export function useNavigateTo(location: string) {
   const navigate = useNavigate();
   navigate(location, { replace: true });
 }
-
 
 export function randomInt(num1:number,num2?:number):number{
   if(num2==undefined){
@@ -129,8 +93,7 @@ export function randomInt(num1:number,num2?:number):number{
     return Math.floor(Math.random() * (num2 - num1 + 1)) + num1
   }
 }
-=======
+
 export function blockClick(time:number,fun : CallableFunction ) {
   setTimeout(fun,time)
 }
->>>>>>> 8113783ac86e178234d8bd6d99f42effc53d42bb
